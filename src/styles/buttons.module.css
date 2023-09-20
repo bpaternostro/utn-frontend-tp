@@ -1,0 +1,17 @@
+.btnPrimary, .disableBtnPrimary{
+    border-radius: 8px;
+    background: var(--site-button-color);
+    padding: 8px 20px;
+    text-align: center;
+    color: #FFF;
+    font-family: var(--font-family-links-2);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.disableBtnPrimary{
+    background: var(--gray-blue-grey-blue-70);
+    cursor: not-allowed;
+}

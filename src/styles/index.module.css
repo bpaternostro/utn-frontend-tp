@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Roboto+Condensed:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,100;1,500;1,700;1,900&display=swap');
+
+:root{
+    --nav-bar-background:#FFF;
+    --header--footer--padding--full:9vw;
+    --grey-white:#FFF;
+    --grey-light:#C0C6C9;
+    --grey-normal:#586870;
+    --gray-blue-grey-blue-98: #F7F8FA;
+    --gray-blue-grey-blue-80: #ADB8CC;
+    --gray-blue-grey-blue-70: #7D8FB3;
+    --gray-blue-grey-blue-50: #4D5E80;
+    --gray-blue-grey-blue-60: #6B7A99;
+    --site-button-color:#4A55A2;
+    --font-weight-light: 400;
+    --font-weight: 700;
+    --font-weight-strong: 900;
+    --font-family: 'Roboto', sans-serif; 
+    --font-family-links: 'Roboto Condensed', sans-serif;
+    --font-family-links-2: 'Poppins', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    color: var(--gray-blue-grey-blue-60);
+    font-weight: var(--font-weight);
+    text-decoration: none;
+}
+
+body{
+    background-color: var(--gray-blue-grey-blue-98);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+@media screen and (max-width: 900px) {
+    input{
+        width: 100%;
+    }
+    
+    header{
+        justify-content: space-between;
+    }
+    
+    footer, .product-container ,.product-container > .products{
+        flex-direction: column;
+        gap:25px
+    }
+
+    footer > div:nth-child(2){
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #search-nav-icon{
+        display: block;
+    }
+
+    .searchContainer, .logoBrand, footer > div:nth-child(2) > span.howToPlace {
+        display: none;
+    }
+
+    main{
+        padding: 0px 30px;
+    }
+
+    main > div:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    main > div:nth-child(2) > div:nth-child(1) {
+        padding: 25px;
+    }
+
+    main > div:nth-child(2) > div:nth-child(2) {
+        padding: 0px;
+    }
+
+    main > div:nth-child(2) > div:nth-child(2) > div:nth-child(3){
+        justify-content: center;
+        padding: 40px;
+    }
+    
+    .productContainer{
+        padding: 5px;
+    }
+
+    .contactContainer{
+        width: 100%;
+        padding: 15px;
+    }
+
+    .contactFormContainer{
+        padding: 30px;
+        width: 100%;
+    }
+
+    .btnPrimary{
+        font-size: 16px;
+    }
+
+    .products{
+        width: 100%
+    }
+    
+    .product{
+        width: 100%
+    }
+
+    .filter{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+   
+    header{
+        justify-content: space-between;
+        padding: 0px 20px 0px 20px;
+    }
+
+    footer{
+        padding: 40px 20px 0px 20px;
+    }
+
+    footer > div:nth-child(2){
+        justify-content: space-between;
+    }
+
+    header div:nth-child(1), header div:nth-child(3) nav{
+        gap: 10px;
+    }
+
+}
+
+
+@media screen and (max-width: 300px) {
+
+    header div:nth-child(1), header div:nth-child(3) nav{
+        gap: 5px;
+    }
+    
+}
