@@ -1,6 +1,7 @@
 const product1 = {
   name:"Televisor LED 80 pulgadas",
-  category: 'Smart Tvs | Tvs',
+  category: 'Tvs',
+  brand:'LG',
   price:9500.08,
   currency:"EUR",
   stock:30,
@@ -10,7 +11,8 @@ const product1 = {
 
 const product2 = {
   name:"Tablet Samsung",
-  category: 'Tablets | Tech',
+  category: 'Tablets',
+  brand:'Samsung',
   price:11950.56,
   currency:"EUR",
   stock:0,
@@ -21,6 +23,7 @@ const product2 = {
 const product3 = {
   name:"Laptop Lenovo",
   category: 'Laptops',
+  brand:'LG',
   price:9500.09,
   currency:"EUR",
   stock:30,
@@ -31,6 +34,7 @@ const product3 = {
 const product4 = {
   name:"Laptop Lenovo",
   category: 'Laptops',
+  brand:'LG',
   price:9500.09,
   currency:"EUR",
   stock:30,
@@ -41,6 +45,7 @@ const product4 = {
 const product5 = {
   name:"Laptop Lenovo",
   category: 'Laptops',
+  brand:'Samsung',
   price:9500.09,
   currency:"EUR",
   stock:30,
@@ -51,6 +56,7 @@ const product5 = {
 const product6 = {
   name:"Laptop Lenovo",
   category: 'Laptops',
+  brand:'LG',
   price:9500.09,
   currency:"EUR",
   stock:30,
@@ -61,6 +67,7 @@ const product6 = {
 const product7 = {
   name:"Laptop Lenovo",
   category: 'Laptops',
+  brand:'LG',
   price:9500.09,
   currency:"EUR",
   stock:30,

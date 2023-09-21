@@ -1,4 +1,24 @@
 .filter{
-    width: 40%;
+    width: 25%;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+.appliedFilter{
+    border: 1px solid #666;
+    border: 10px;
+}
+.appliedFilterContainer, .filterContainer{
+    border: 1px solid var(--grey-normal);
+    border-radius: 5px;
+    min-height:150px;
+    padding: 5px;
+}
+
+.filterContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
 }

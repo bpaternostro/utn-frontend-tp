@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import { useGlobalContext } from '../../context/GlobalContextProvider'
 
 const Navbar = () => {
-    const {cart} = useGlobalContext()
+    const {cart, filterBySearchInputBox} = useGlobalContext()
     return (
         <header>
             <div>
@@ -22,7 +22,7 @@ const Navbar = () => {
                 <button>
                     <AiOutlineSearch size={18}/>
                 </button>
-                <input type="text" name="search" id="search" placeholder="Search Goods ..."/>
+                <input type="text" name="search" id="search" placeholder="Search Goods ..." onChange={filterBySearchInputBox}/>
             </div>
             <div>
                 <nav>

@@ -5,7 +5,10 @@ const GlobalContext = createContext()
 const GlobalContextProvider = ({children}) => {
     const [products, setProductsToShow] = useState(productsDb)
     const [cart, setCart] = useState([])
+    const [cartTotal, setCartTotal] = useState([])
+    const [currency, setCurrency] = useState(productsDb[0].currency)
     const [filterFields, setFilterFields] = useState([])
+    const [brands, setBrands] = useState([...new Set(productsDb.map(item => item.brand))])
     const [categories, setCategories] = useState([...new Set(productsDb.map(item => item.category))])
     const isInCart = (id) => cart.some(product=> product.id == id)
     const findProductCart = (id) => cart.find(product => product.id == id)
@@ -43,16 +46,33 @@ const GlobalContextProvider = ({children}) => {
         }
     }
 
-    useEffect(() => {
-        if(filterFields){
-            setProductsToShow(filterFields.map((f) => ( products.filter( p => p[f.filterField] === f.filterValue))))
+    const handleFilterFields = (filter) => {
+        filterFields.includes(filter) ? setFilterFields(filterFields.filter((f) => f!== filter)) : setFilterFields([...filterFields, filter])
+    }
+
+    const productMustBeDisplayed = (product) => {
+        return filterFields.map(f => product[f.split('-')[0]] === f.split('-')[1]).filter(v => v).length
+    }
+
+    const filterBySearchInputBox = (evento) => {
+        let normalizedString = evento.target.value.toLowerCase()
+        if(normalizedString) {
+            setProductsToShow(products.filter(p => p.name.toLowerCase().includes(normalizedString) || p.category.toLowerCase().includes(normalizedString) || p.brand.toLowerCase().includes(normalizedString)))
+        }else{
+            filterFields.length ? setProductsToShow(productsDb.filter(p => productMustBeDisplayed(p))) : setProductsToShow(productsDb)
         }
+    }
+
+    useEffect(() => {
+        filterFields.length ? setProductsToShow(productsDb.filter(p => productMustBeDisplayed(p))) : setProductsToShow(productsDb)
     },[filterFields])
 
-    const getTotalProductsInCart = () => {} /*ver codigo en GIT*/
-
+    useEffect(() => {
+        setCartTotal(cart.reduce( (total, current) => (total = total + current.price), 0).toFixed(2))
+    },[cart])
+    
     return (
-        <GlobalContext.Provider value={{handleAddProduct, isInCart, findProductCart, handleDeleteProduct, cart, products, categories, setFilterFields}}>
+        <GlobalContext.Provider value={{brands, cart, cartTotal, products, categories, currency, filterFields, handleAddProduct, isInCart, findProductCart, filterBySearchInputBox, handleDeleteProduct, handleFilterFields}}>
             {children}
         </GlobalContext.Provider>
     )

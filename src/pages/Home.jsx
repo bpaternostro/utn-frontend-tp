@@ -12,7 +12,7 @@ const Home = () => {
           <Filter/>
           <div className={ marketplaceStyle.products }>
               {
-                  products && products.map((product) =>(
+                  products.map((product) =>(
                       <Productcard {...product} key={product.id} />
                   ))
               }

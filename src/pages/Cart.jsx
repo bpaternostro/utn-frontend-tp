@@ -6,7 +6,7 @@ import { useGlobalContext } from '../context/GlobalContextProvider'
 import { Link } from 'react-router-dom'
 
 const Cart = () => {
-  const {cart} = useGlobalContext()
+  const {cart, cartTotal, currency} = useGlobalContext()
   return (
     <>
       <main>
@@ -30,7 +30,7 @@ const Cart = () => {
           <div className={ cartStyle.cartTotal }>
             <div className={ cartStyle.cartTotalContainer }>
               <span className={ cartStyle.productTitle }>Total</span>
-              <span>$34.000</span>
+              <span className={ cartStyle.productTitle }>{`${currency} ${cartTotal}`}</span>
               <button className={buttonStyle.btnPrimary}>Buy</button>
             </div>
           </div>

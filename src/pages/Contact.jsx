@@ -13,6 +13,8 @@ const Contact = () => {
                       <input name="full-name" type="text" required/>
                       <label>Email *</label>
                       <input name="email" type="text" required/>
+                      <label>Subject *</label>
+                      <input name="subject" type="text" required/>
                       <label>Message *</label>
                       <textarea name="message" id="" cols="30" rows="10" required></textarea>
                   </div>
