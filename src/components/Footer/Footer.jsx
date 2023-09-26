@@ -6,40 +6,36 @@ const Footer = () => {
   return (
     <footer>
         <div>
-            <h3>Constructor</h3>
-            <p>12 Water St. Vacouver, BC<br></br>
-            V6B 132 United States</p>
+            <h3>Diseñador</h3>
+            <p>Bruno Paternostro<br></br>
+            Made in Argentina</p>
         </div>
         <div>
             <span>
-                <h4>Corporate Sales</h4>
-                <Link to="./feedback.html">Feedback</Link>
-                <Link to="./jobs.html">Jobs</Link>
-                <Link to="./news.html">News</Link>
-                <Link to="./sales-rules.html">Sales Rules</Link>
-                <Link to="./for-partners.html">For partners</Link>
-            </span>
-            <span>
-                <h4>Bonus Program</h4>
-                <Link to="./gift-carfs.html">Gift Сards</Link>
-                <Link to="./bill-payment-verification.html">Bill Payment Verification</Link>
-                <Link to="./loans.html">Loans</Link>
-                <Link to="./delivery.html">Delivery</Link>
-                <Link to="./service-centers.html">Service centers</Link>
+                <h4>Sobre nosotros</h4>
+                <Link to="/under-construction">Feedback</Link>
+                <Link to="/under-construction">Trabaja con nosotros</Link>
+                <Link to="/under-construction">Novedades</Link>
+                <Link to="/under-construction">Sobre nosotros</Link>
             </span>
             <span className={footerStyle.howToPlace}>
-                <h4>How to place an order</h4>
-                <Link to="./ways-of-payment.html">Ways of payment</Link>
-                <Link to="./exchange-and-return-of-goods.html">Exchange and return of goods</Link>
-                <Link to="./warranty-service.html">Warranty service</Link>
-                <Link to="./order-status.html">Order status</Link>
-                <Link to="./knowledge-base.html">Knowledge base</Link>
+                <h4>Acerca de nuestro servicio</h4>
+                <Link to="/under-construction">Medios de Pago</Link>
+                <Link to="/under-construction">Tipos de cambio</Link>
+                <Link to="/under-construction">Garantia de servicio</Link>
+                <Link to="/under-construction">Seguimiendo de tu pedido</Link>
+            </span>
+            <span>
+                <h4>Contacto</h4>
+                <Link to="/contact">Contacto</Link>
+                <Link to="/under-construction">Blog</Link>
+                <Link to="/under-construction">Redes Sociales</Link>
             </span>
         </div>
         <div>
-            <Link to="./right-reserved.html">2030 Comapny. All Rights Reserved.</Link>
-            <Link to="./terms-condition.html">Terms & Conditions</Link>
-            <Link to="./privacy-policy.html">Privacy Policy</Link>
+            <Link to="/under-construction">2030 Comapny. All Rights Reserved.</Link>
+            <Link to="/under-construction">Terminos & Condiciones</Link>
+            <Link to="/under-construction">Privacy Policy</Link>
         </div>
     </footer>
   )

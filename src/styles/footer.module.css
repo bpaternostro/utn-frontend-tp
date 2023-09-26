@@ -71,3 +71,32 @@ footer div:nth-child(3){
     font-weight: var(--font-weight);
     line-height: 20px; /* 166.667% */
 }
+
+
+@media screen and (max-width: 900px) {
+    footer{
+        flex-direction: column;
+        gap:25px
+    }
+
+    footer > div:nth-child(2){
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    footer > div:nth-child(2) > span.howToPlace {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+   
+    footer{
+        padding: 40px 20px 0px 20px;
+    }
+
+    footer > div:nth-child(2){
+        justify-content: space-between;
+    }
+
+}

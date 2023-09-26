@@ -18,16 +18,16 @@ const Navbar = () => {
                 </span>
                 <span className={navbarStyle.logoBrand}>Bruno's Brand</span>
             </div>
-            <div className={indexStyle.searchContainer}>
+            <div className={navbarStyle.searchContainer}>
                 <button>
                     <AiOutlineSearch size={18}/>
                 </button>
-                <input type="text" name="search" id="search" placeholder="Search Goods ..." onChange={filterBySearchInputBox}/>
+                <input type="text" name="search" id="search" placeholder="Buscar ..." onChange={filterBySearchInputBox}/>
             </div>
             <div>
                 <nav>
-                    <Link to="/contact">Contact</Link>
-                    <Link to="/home">
+                    <Link to="/contact">Contacto</Link>
+                    <Link to="/">
                         <ImHome3 size={18}/>
                     </Link>
                     <Link to="" id={navbarStyle.searchNavIcon}>

@@ -12,7 +12,7 @@ const Cart = () => {
       <main>
           <div className={ cartStyle.cartProductContainer }>
             <div>
-                <h2 className={ cartStyle.productTitle }>Cart</h2>
+                <h2 className={ cartStyle.productTitle }>Carrito</h2>
             </div>
             <div className={ cartStyle.cartProducts}>
                 {
@@ -23,15 +23,15 @@ const Cart = () => {
             </div>
             {
               cart.length ?
-              <Link className={buttonStyle.btnPrimary} to="/home" >Agregar mas productos</Link> :
+              <Link className={buttonStyle.btnPrimary} to="/" >Agregar mas productos</Link> :
               <span></span>
             }
           </div>
           <div className={ cartStyle.cartTotal }>
             <div className={ cartStyle.cartTotalContainer }>
               <span className={ cartStyle.productTitle }>Total</span>
-              <span className={ cartStyle.productTitle }>{`${currency} ${cartTotal}`}</span>
-              <button className={buttonStyle.btnPrimary}>Buy</button>
+              <span className={ cartStyle.productTitle }>{`${currency} ${cartTotal.toLocaleString('en-US')}`}</span>
+              <button className={buttonStyle.btnPrimary}>Comprar</button>
             </div>
           </div>
           

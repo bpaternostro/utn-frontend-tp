@@ -1,6 +1,15 @@
+.productDetailContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+    min-height: 100vh;
+    padding: 20px;
+    width: 70%;
+}
+
 .productTitle{
     color: var(--gray-blue-grey-blue-50, #4D5E80);
-    font-feature-settings: 'clig' off, 'liga' off;
     /* Medium/Medium 24 */
     font-family: Roboto;
     font-size: 24px;
@@ -11,12 +20,8 @@
 
 .productPara{
     color: var(--gray-blue-grey-blue-50, #4D5E80);
-    font-feature-settings: 'clig' off, 'liga' off;
-    /* Medium/Medium 24 */
     font-size: 18px;
-    font-style: normal;
     font-weight: var(--font-weight);
-    line-height: 30px; /* 125% */
 }
 
 .productDetailContainer > div:nth-child(1){
@@ -29,7 +34,7 @@
     display: flex;
     flex-direction: row;
     gap: 25px;
-    height: 60vh;
+    min-height: 50vh;
 }
 
 .productDetailContainer > div:nth-child(2) > div:nth-child(1){
@@ -37,71 +42,63 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    flex: 1 0 0;
-    align-self: stretch;
+    gap: 40px;
     border-radius: 10px;
     background: var(--white-white, #FFF);
     /* Shadows/Gray Blue 30/3%/5b */
     box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
+    padding: 30px;
+    width: 100%;
 }
 
-.productDetailContainer > div:nth-child(2) > div:nth-child(1) > span{
+.price{
     color: var(--gray-blue-grey-blue-60, #6B7A99);
     text-align: center;
     font-family: var(--font-family-links);
-    font-size: 40px;
-    font-style: normal;
+    font-size: 25px;
     font-weight: var(--font-weight-strong);
-    line-height: normal;
 }
 
 .productDetailContainer > div:nth-child(2) > div:nth-child(2){
     display: flex;
-    padding: 50px 0px;
+    padding: 20px 0px;
     flex-direction: column;
     gap: 15px;
     justify-content: space-between;
     align-items: flex-start;
-    flex: 1 0 0;
-    align-self: stretch;
+    width: 100%;
 }
 
 .productDetailContainer > div:nth-child(2) > div:nth-child(2) > div:nth-child(2){
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     gap:10px;
-    width: 100%;
     border: 2px solid var(--gray-blue-grey-blue-70);
-    
     border-radius: 10px;
+    width: 100%
 } 
 
 .productDetailContainer > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > span{
-    padding: 15px;
+    padding: 10px;
     border-bottom: 2px solid var(--gray-blue-grey-blue-70);
     color: var(--gray-blue-grey-blue-60, #6B7A99);
-    font-feature-settings: 'clig' off, 'liga' off;
-    /* Bold/Bold 13 */
-    font-family: Roboto;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 25px; /* 192.308% */
+    font-family: var(--font-family-links);
+    font-size: 16px;
+    font-weight: var(--font-weight-strong);
 }
 
 .productDetailContainer > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
 }
 
-
 .productDetailContainer > div:nth-child(2) > div:nth-child(1) > img{
-    width: 70%;   
+    width: 60%;
 }
 
 .productDetailContainer > div:nth-child(2) > div:nth-child(2) > div:nth-child(3){
@@ -129,7 +126,7 @@
 .colorCircle{
     width: 40px;
     height: 40px;
-    border-radius: 160px;
+    border-radius: 60px;
 }
 
 .black{
@@ -142,4 +139,26 @@
 
 .grey{
     background: var(--product-color-prodict-color-4, #B4BED0);
+}
+
+@media screen and (max-width: 1000px) {
+    .productDetailContainer{ 
+        width: 100%;
+    }
+    .productDetailContainer > div:nth-child(2){
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .productDetailContainer > div:nth-child(2) > div:nth-child(1) > img{
+        width: 90%;
+    }
+    .price{
+        font-size: 22px;
+    }
+    .productDetailContainer > div:nth-child(2) > div:nth-child(2) > div:nth-child(3){
+        justify-content: center;
+    }
 }

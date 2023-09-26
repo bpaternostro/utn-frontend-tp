@@ -7,8 +7,8 @@ import { useGlobalContext } from '../context/GlobalContextProvider'
 
 const ProductDetail = () => {
   const prod = useParams()
-  const {products} = useGlobalContext()
-  const producto = products[prod.id] 
+  const {counter, products, handleAddProduct, setActualProduct} = useGlobalContext()
+  const producto = products[prod.id-1]
   return (
     <>
         <main>
@@ -19,32 +19,27 @@ const ProductDetail = () => {
                 <div>
                     <div>
                         <img src={`/img/${producto.img.src}`} alt={producto.img.alt} />
-                        <span className={ productDetailStyle.price }>$950.00</span>
+                        <span className={ productDetailStyle.price }>{`${producto.currency} ${producto.price}`}</span>
                     </div>
                     <div>
                         <p className={ productDetailStyle.productPara }>
-                            Description:<br></br>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus posuere libero nec mi molestie rutrum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
+                            {producto.description}
                         </p>
                         <div>
                             <span>Colors</span>
                             <div>
-                                <div className={ productDetailStyle.colorCircleContainer }>
-                                    <div className={  `${productDetailStyle.colorCircle} ${productDetailStyle.black}` }></div>
-                                    <span className={ productDetailStyle.colorCircleName }>Black</span>
-                                </div>
-                                <div className={ productDetailStyle.colorCircleContainer }>
-                                    <div className={ `${productDetailStyle.colorCircle} ${productDetailStyle.orange}`}></div>
-                                    <span className={ productDetailStyle.colorCircleName }>Orange</span>
-                                </div>
-                                <div className={ productDetailStyle.colorCircleContainer }>
-                                    <div className={  `${productDetailStyle.colorCircle} ${productDetailStyle.grey}` }></div>
-                                    <span className={ productDetailStyle.colorCircleName }>Grey</span>
-                                </div>
+                                {
+                                    producto.colors.map(c => 
+                                        <div className={ productDetailStyle.colorCircleContainer }>
+                                            <div style={{backgroundColor: c.color}} className={productDetailStyle.colorCircle}></div>
+                                            <span className={ productDetailStyle.colorCircleName }>{c.colorName} </span>
+                                        </div>
+                                    )
+                                }
                             </div>
                         </div>
                         <div>
-                            <button className={ buttonStyle.btnPrimary }>Add to Cart</button>
+                            <button className={buttonStyle.btnPrimary} onClick={() => handleAddProduct(producto.id)}>Add to cart</button>
                         </div>
                     </div>
                 </div>

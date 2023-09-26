@@ -6,20 +6,20 @@ const Contact = () => {
     <>
       <main className={contactStyle.contactContainer}>
         <div className={contactStyle.contactFormContainer}>
-              <span>Contact</span>
+              <span className={contactStyle.contactFormContainerTitle}>Contacto</span>
               <form action="Post">
                   <div>
-                      <label>Full Name *</label>
+                      <label>Nombre completo *</label>
                       <input name="full-name" type="text" required/>
                       <label>Email *</label>
                       <input name="email" type="text" required/>
-                      <label>Subject *</label>
+                      <label>Asunto *</label>
                       <input name="subject" type="text" required/>
-                      <label>Message *</label>
+                      <label>Mensaje *</label>
                       <textarea name="message" id="" cols="30" rows="10" required></textarea>
                   </div>
                   <div>
-                      <button className={buttonStyle.btnPrimary}>Send</button>
+                      <button className={buttonStyle.btnPrimary}>Enviar</button>
                   </div>
               </form>
         </div>

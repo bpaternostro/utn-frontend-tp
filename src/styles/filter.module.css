@@ -1,24 +1,61 @@
 .filter{
-    width: 25%;
+    width: 20%;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    gap:5px;
+    gap:10px;
 }
 
-.appliedFilter{
-    border: 1px solid #666;
-    border: 10px;
-}
-.appliedFilterContainer, .filterContainer{
+.appliedFilter, .filterToApplied{
     border: 1px solid var(--grey-normal);
-    border-radius: 5px;
-    min-height:150px;
-    padding: 5px;
+    padding: 2px 5px 2px 5px;
+    font-size: 12px;
+    margin: 2px;
 }
 
-.filterContainer{
+.filterToApplied{
+    background-color: transparent;
+}
+
+
+.appliedFilterContainer, .filterContainer{
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    width: 100%;
+    border: 1px solid var(--grey-light);
+    border-radius: 5px;
+    padding: 10px;
+    gap:8px;
+}
+
+
+.filterContainer > div:nth-child(3), .filterContainer > div:nth-child(5), .appliedFilterContainer > div:nth-child(2) > div, .appliedFilterContainer > div:nth-child(3) > div{
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.sectionFilter{
+    font-size: 14px;
+}
+
+.sectionFilterCategory{
+    font-size: 12px;
+    color: var(--grey-light);
+    font-weight: var(--font-weight-light);
+}
+@media screen and (max-width: 900px) {
+    .filter{
+        flex-direction: column;
+        width: 100%;
+    }
+    .filterContainer > div:nth-child(3), .filterContainer > div:nth-child(5), .appliedFilterContainer > div:nth-child(2) > div, .appliedFilterContainer > div:nth-child(3) > div{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .filter{
+        padding: 5px;
+    }
 }

@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { buttonStyle } from '../../styles'
 import { cartProductCardStyle } from '../../styles'
-
+import { Link } from 'react-router-dom'
 import { useGlobalContext } from '../../context/GlobalContextProvider'
 
-const CardProductcard = ({ name, category, price, currency, stock, img, id }) => {
-  const {handleDeleteProduct} = useGlobalContext()
+const CardProductcard = ({ name, category, price, currency, stock, img, quantity, id }) => {
+  const {counter, handleClickBtn, handleDeleteProduct} = useGlobalContext()
   return (
     <div className={cartProductCardStyle.product}>
         <span className={cartProductCardStyle.imageContainer}>
@@ -15,11 +15,22 @@ const CardProductcard = ({ name, category, price, currency, stock, img, id }) =>
           <span className={cartProductCardStyle.categoryName}>{category}</span>
           <span className={cartProductCardStyle.productName}>{name}</span>
         </span>
-        <span className={cartProductCardStyle.priceBanner}>
-            <span className={cartProductCardStyle.currency}>{currency}</span>
-            <span className={cartProductCardStyle.price}>{price}</span>
+        <span className={cartProductCardStyle.priceQuantityBanner}>
+            <span className={cartProductCardStyle.priceBanner}>
+              <span className={cartProductCardStyle.currency}>{currency}</span>
+              <span className={cartProductCardStyle.price}>{price.toLocaleString('en-US')}</span>
+              <span className={cartProductCardStyle.quantity}>{`* ${quantity}`}</span>  
+            </span>
+            <span>
+              <span className={cartProductCardStyle.quantityManager}>
+                  <button className={ cartProductCardStyle.minus } onClick={(event) => handleClickBtn(id,event)}>-</button>
+                  <span>{quantity}</span>
+                  <button className={ cartProductCardStyle.plus } onClick={(event) => handleClickBtn(id,event)}>+</button>
+              </span>
+              <span className={ cartProductCardStyle.stock }>{`Stock disponible (${stock})`}</span>
+            </span>
         </span>
-        <button className={buttonStyle.btnPrimary} onClick={() => handleDeleteProduct(id)}>Remove</button>
+        <button className={buttonStyle.btnPrimary} onClick={() => handleDeleteProduct(id)}>Eliminar</button>
     </div>
   )
 }

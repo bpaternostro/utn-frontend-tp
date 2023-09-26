@@ -59,10 +59,27 @@ textarea{
     align-items: end;
 }
 
-span{
+.contactFormContainerTitle{
     color: var(--grey-dark, #586870);
     /* title/H5 */
     font-family: var(--font-family-links-2);
     font-size: 16px;
     font-weight: var(--font-weight);
+}
+
+@media screen and (max-width: 900px) {
+    .contactContainer{
+        width: 100%;
+        padding: 15px;
+    }
+
+    .contactFormContainer{
+        padding: 30px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+   
+
 }

@@ -88,3 +88,35 @@ header > div:nth-child(2) > button{
     padding: 5px;
     background-color: var(--grey-white);
 }
+
+@media screen and (max-width: 900px) {    
+    header{
+        justify-content: space-between;
+    }
+    #searchNavIcon{
+        display: block;
+    }
+    .searchContainer, .logoBrand {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+   
+    header{
+        justify-content: space-between;
+        padding: 0px 20px 0px 20px;
+    }
+
+    header div:nth-child(1), header div:nth-child(3) nav{
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    header div:nth-child(1), header div:nth-child(3) nav{
+        gap: 5px;
+    }
+    
+}

@@ -6,6 +6,7 @@ const GlobalContextProvider = ({children}) => {
     const [products, setProductsToShow] = useState(productsDb)
     const [cart, setCart] = useState([])
     const [cartTotal, setCartTotal] = useState([])
+    const [error, setError] = useState()
     const [currency, setCurrency] = useState(productsDb[0].currency)
     const [filterFields, setFilterFields] = useState([])
     const [brands, setBrands] = useState([...new Set(productsDb.map(item => item.brand))])
@@ -13,6 +14,17 @@ const GlobalContextProvider = ({children}) => {
     const isInCart = (id) => cart.some(product=> product.id == id)
     const findProductCart = (id) => cart.find(product => product.id == id)
     const findProductById = (id) => products.find(prod => Number(prod.id) === Number(id))
+    const handleClickBtn = (id, event) => {
+        const elements = document.querySelector('.msg');
+        const productFound = findProductCart(id)
+        setError(null)
+        if (event.target.className.includes("minus")){
+            productFound.quantity > 0 ? productFound.quantity -- : setError("Superaste el limite inferior")
+        }else{
+            productFound.quantity < productFound.stock ? productFound.quantity ++ : setError("Superaste el limite superior")
+        }
+        setCart([...cart])
+    }
     const handleDeleteProduct = (id) => {
         if(findProductCart(id).quantity == 1){
             setCart(cart.filter((product) => product.id !== id))
@@ -68,11 +80,11 @@ const GlobalContextProvider = ({children}) => {
     },[filterFields])
 
     useEffect(() => {
-        setCartTotal(cart.reduce( (total, current) => (total = total + current.price), 0).toFixed(2))
+        setCartTotal(cart.reduce( (total, current) => (total = total + (current.price * current.quantity)), 0).toFixed(2))
     },[cart])
     
     return (
-        <GlobalContext.Provider value={{brands, cart, cartTotal, products, categories, currency, filterFields, handleAddProduct, isInCart, findProductCart, filterBySearchInputBox, handleDeleteProduct, handleFilterFields}}>
+        <GlobalContext.Provider value={{brands, cart, cartTotal, products, categories, currency, filterFields, handleAddProduct, isInCart, findProductCart, filterBySearchInputBox, handleDeleteProduct, handleFilterFields, handleClickBtn}}>
             {children}
         </GlobalContext.Provider>
     )
