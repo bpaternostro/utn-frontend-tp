@@ -10,8 +10,7 @@ const ProductDetail = () => {
   const {counter, products, handleAddProduct, setActualProduct} = useGlobalContext()
   const producto = products[prod.id-1]
   return (
-    <>
-        <main>
+    <main>
             <div className={ productDetailStyle.productDetailContainer }>
                 <div>
                     <h1 className={ productDetailStyle.productTitle }>Apple Mac Book Pro</h1>
@@ -44,10 +43,7 @@ const ProductDetail = () => {
                     </div>
                 </div>
             </div>
-        </main>
-    </>
-    
-    
+    </main>
   )
 }
 

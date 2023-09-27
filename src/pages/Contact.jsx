@@ -1,9 +1,8 @@
 import React from 'react'
 import { buttonStyle, contactStyle } from '../styles'
-
+import { Link } from 'react-router-dom'
 const Contact = () => {
   return (
-    <>
       <main className={contactStyle.contactContainer}>
         <div className={contactStyle.contactFormContainer}>
               <span className={contactStyle.contactFormContainerTitle}>Contacto</span>
@@ -19,13 +18,11 @@ const Contact = () => {
                       <textarea name="message" id="" cols="30" rows="10" required></textarea>
                   </div>
                   <div>
-                      <button className={buttonStyle.btnPrimary}>Enviar</button>
+                      <Link to="/success" className={buttonStyle.btnPrimary}>Enviar</Link>
                   </div>
               </form>
         </div>
-      </main>
-    </>
-    
+      </main>    
   )
 }
 

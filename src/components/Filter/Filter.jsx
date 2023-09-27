@@ -1,11 +1,11 @@
 import React from 'react'
-import { filterStyle } from '../../styles'
+import { filterStyle, indexStyle } from '../../styles'
 import { useGlobalContext } from '../../context/GlobalContextProvider'
 
 const Filter = () => {
   const {brands, categories, filterFields, handleFilterFields} = useGlobalContext()
   return (
-    <div className={ filterStyle.filter }>
+    <div className={`${ filterStyle.filter} ${indexStyle.boxContainer}`}>
       <div className={ filterStyle.filterContainer }>
         <span className={ filterStyle.sectionFilter}>Filtros</span>
         <span className={ filterStyle.sectionFilterCategory}>Categoria</span>

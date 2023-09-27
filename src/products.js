@@ -7,7 +7,7 @@ const product1 = {
   currency:"$",
   stock:30,
   img:{src:"tv-samsung-50.png", alt:"SMART LED TV SAMSUNG 50 PULGADAS 4K UHD 50AU7000"},
-  colors:[{color:"#666",colorName:"Gris"}, {color:"#666",colorName:"Negro"}, {color:"#666",colorName:"Naranja"}],
+  colors:[{color:"#666", colorName:"Gris"}, {color:"#000000",colorName:"Negro"}, {color:"#DADBDD", colorName:"Plata"}],
   id:1
 }
 
@@ -20,7 +20,7 @@ const product2 = {
   currency:"$",
   stock:13,
   img:{src:"tv-phillips-50.jpg", alt:"Smart Tv 50 Pulgadas 4K Ultra HD 50PUD7406/77 - PHILIPS"},
-  colors:[{color:"#666",colorName:"Gris"}, {color:"#666",colorName:"Negro"}, {color:"#666",colorName:"Naranja"}],
+  colors:[{color:"#737CA1",colorName:"Slate Blue Grey"}, {color:"#36454F",colorName:"Charcoal Blue"}, {color:"#151B54",colorName:"Night Blue"}],
   id:2
 }
 
@@ -33,7 +33,7 @@ const product3 = {
   currency:"$",
   stock:34,
   img:{src:"tv-hisense-43.jpg", alt:"Smart Tv 43 Pulgadas Full HD 43A42H - HISENSE"},
-  colors:[{color:"#666",colorName:"Gris"}, {color:"#666",colorName:"Negro"}, {color:"#666",colorName:"Naranja"}],
+  colors:[{color:"#2554C7",colorName:"Sapphire Blue"}, {color:"#000",colorName:"Negro"}, {color:"#66CDAA",colorName:"MediumAquaMarine"}],
   id:3
 }
 
@@ -46,7 +46,7 @@ const product4 = {
   currency:"$",
   stock:5,
   img:{src:"notebook-asus.jpg", alt:"NOTEBOOK i3 X515EA-BR1751WPI 4G256G - ASUS"},
-  colors:[{color:"#666",colorName:"Gris"}, {color:"#666",colorName:"Negro"}, {color:"#666",colorName:"Naranja"}],
+  colors:[{color:"#2B60DE",colorName:"Balloon Blue"}, {color:"#7DFDFE",colorName:"Tron Blue"},],
   id:4
 }
 
@@ -59,7 +59,7 @@ const product5 = {
   currency:"$",
   stock:3,
   img:{src:"notebook-macbook.jpg", alt:"MacBook Pro 16 Apple M1 Pro chip 10 core CPU 16 core GPU 1TB SSD Silver - APPLE"},
-  colors:[{color:"#666",colorName:"Gris"}, {color:"#666",colorName:"Negro"}, {color:"#666",colorName:"Naranja"}],
+  colors:[{color:"#3B9C9C",colorName:"Deep-Sea"}, {color:"#000", colorName:"Negro"}],
   id:5
 }
 
@@ -72,7 +72,7 @@ const product6 = {
   currency:"$",
   stock:7,
   img:{src:"tablet-samsung-s9.jpg", alt:"TAB 11P S9 SM-X710 8G128GB GR - SAMSUNG"},
-  colors:[{color:"#666",colorName:"Gris"}, {color:"#666",colorName:"Negro"}, {color:"#666",colorName:"Naranja"}],
+  colors:[{color:"#666", colorName:"Gris"}, {color:"#000000",colorName:"Negro"}, {color:"#DADBDD", colorName:"Plata"}],
   id:6
 }
 
@@ -85,7 +85,7 @@ const product7 = {
   currency:"$",
   stock:4,
   img:{src:"tablet-samsung-a7.jpg", alt:"Tablet A7 LITE 8,7 Pulgadas 32 GB 3 GB - SAMSUNG"},
-  colors:[{color:"#666",colorName:"Gris"}, {color:"#666",colorName:"Negro"}, {color:"#666",colorName:"Naranja"}],
+  colors:[{color:"#3B9C9C",colorName:"Deep-Sea"}, {color:"#000", colorName:"Negro"}],
   id:7
 }
 
@@ -98,7 +98,7 @@ const product8 = {
   currency:"$",
   stock:4,
   img:{src:"airpods-3-apple.jpg", alt:"Apple AirPods (3ª generación) con estuche de carga Lightning - APPLE"},
-  colors:[{color:"#666",colorName:"Gris"}, {color:"#666",colorName:"Negro"}, {color:"#666",colorName:"Naranja"}],
+  colors:[{color:"#2554C7",colorName:"Sapphire Blue"}, {color:"#000",colorName:"Negro"}, {color:"#66CDAA",colorName:"MediumAquaMarine"}],
   id:8
 }
 
@@ -111,7 +111,7 @@ const product9 = {
   currency:"$",
   stock:20,
   img:{src:"auris-daewoo.jpg", alt:"AURICULAR INALÁMBRICO IN EAR DW-CS3105-BLK AZUL - DAEWOO"},
-  colors:[{color:"#666",colorName:"Gris"}, {color:"#666",colorName:"Negro"}, {color:"#666",colorName:"Naranja"}],
+  colors:[{color:"#666",colorName:"Gris"}, {color:"#000000",colorName:"Negro"}, {color:"#DADBDD", colorName:"Plata"}],
   id:9
 }
 
@@ -124,7 +124,7 @@ const product10 = {
   currency:"$",
   stock:35,
   img:{src:"celular-redmi-xiaomi.jpg", alt:"CELULAR LIBERADO REDMI NOTE 11 GRIS 128 GB - XIAOMI"},
-  colors:[{color:"#666", colorName:"Gris"}, {color:"#666", colorName:"Negro"}, {color:"#666", colorName:"Naranja"}],
+  colors:[{color:"#666", colorName:"Gris"}, {color:"#000000",colorName:"Negro"}, {color:"#DADBDD", colorName:"Plata"}],
   id:10
 }
 
@@ -137,7 +137,7 @@ const product11 = {
   currency:"$",
   stock:15,
   img:{src:"celular-motorola.jpg", alt:"CELULAR LIBERADO E13 AZUL 64 GB - MOTOROLA"},
-  colors:[{color:"#666",colorName:"Gris"}, {color:"#666",colorName:"Negro"}, {color:"#666",colorName:"Naranja"}],
+  colors:[{color:"#3B9C9C",colorName:"Deep-Sea"}, {color:"#000000", colorName:"Negro"}],
   id:11
 }
 

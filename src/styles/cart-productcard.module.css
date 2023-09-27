@@ -1,7 +1,7 @@
 .product{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     border-radius: 10px;
     background: var(--grey-white);
@@ -9,8 +9,15 @@
     box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
     border: 10px;
     padding: 20px;
-    width: 90%;
-    max-height: 150px;
+    width: 100%;
+}
+
+.imageContainer, .productBanner, .priceQuantityBanner, .buttonContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
 }
 
 .productBanner{
@@ -18,7 +25,25 @@
     flex-direction: column;
     justify-content: start;
     align-items: start;
+    padding: 10px;
 }
+
+
+.buttonContainerHeader{
+    width: 100%;
+    margin: 5px;
+    display: none;
+}
+
+.buttonContainerFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+
+}
+
 
 .imageContainer{
     display: flex;
@@ -51,7 +76,8 @@ img{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 10px;
+    padding: 10px;
 }
 
 .currency{
@@ -95,4 +121,40 @@ img{
     align-items: center;
     gap: 10px;
     
+}
+
+.btnRemove{
+    width: 30px;
+    height: 30px;
+    border-radius: 25px;
+    font-size: 18px;
+    color: var(--grey-white);
+    font-weight: var(--font-weight-strong);
+    background-color: var(--site-button-color);
+
+}
+
+@media screen and (max-width: 600px) {
+    .product{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .imageContainer, .productBanner, .priceQuantityBanner, .buttonContainer{
+        width: 90%;
+        align-items: center;
+        gap: 15px;
+    }
+    .productName{
+        text-align: center;
+    }
+    .buttonContainerHeader{
+        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
+    }
+    .buttonContainerFooter{
+        display: none;
+    }
 }

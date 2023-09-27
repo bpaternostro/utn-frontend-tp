@@ -22,11 +22,15 @@ label{
 }
 
 input, textarea{
-    width: 80%;
+    width: 100%;
     border-radius: 8px;
     border: 0.5px solid var(--grey-light);
-    background: var(--white, #FFF);
     padding: 3px 8px 3px 16px;
+}
+
+input::placeholder {
+    color: var(--gray-blue-grey-blue-50);
+    font-weight: var(--font-weight-light);
 }
 
 textarea{
@@ -63,8 +67,10 @@ textarea{
     color: var(--grey-dark, #586870);
     /* title/H5 */
     font-family: var(--font-family-links-2);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: var(--font-weight);
+    text-align: left;
+    width: 100%;
 }
 
 @media screen and (max-width: 900px) {

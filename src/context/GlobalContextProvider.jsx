@@ -67,6 +67,7 @@ const GlobalContextProvider = ({children}) => {
     }
 
     const filterBySearchInputBox = (evento) => {
+        console.log(evento.target.value.toLowerCase())
         let normalizedString = evento.target.value.toLowerCase()
         if(normalizedString) {
             setProductsToShow(products.filter(p => p.name.toLowerCase().includes(normalizedString) || p.category.toLowerCase().includes(normalizedString) || p.brand.toLowerCase().includes(normalizedString)))

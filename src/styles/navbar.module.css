@@ -58,8 +58,14 @@ header > div:nth-child(2) > button{
     margin-left: 15px;
 }
 
-#searchNavIcon{
+#searchNavIcon, .closeButtonSearch, header > div:nth-child(3) > span{
     display: none;
+}
+
+.closeButtonSearch{
+    position: absolute;
+    font-size: 10px;
+    right: 1px;
 }
 
 .cartBanner{
@@ -93,6 +99,20 @@ header > div:nth-child(2) > button{
     header{
         justify-content: space-between;
     }
+    
+    header > div:nth-child(3){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: right;
+        gap: 10px;
+
+    }
+
+    header > div:nth-child(3) > span{
+        width: 100%;
+    }
+
     #searchNavIcon{
         display: block;
     }

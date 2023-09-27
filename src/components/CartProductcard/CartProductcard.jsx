@@ -8,6 +8,9 @@ const CardProductcard = ({ name, category, price, currency, stock, img, quantity
   const {counter, handleClickBtn, handleDeleteProduct} = useGlobalContext()
   return (
     <div className={cartProductCardStyle.product}>
+        <span className={cartProductCardStyle.buttonContainerHeader}>
+          <button className={cartProductCardStyle.btnRemove} onClick={() => handleDeleteProduct(id)}>x</button>
+        </span>
         <span className={cartProductCardStyle.imageContainer}>
           <img src={`/img/${img.src}`} alt={img.alt} />
         </span>
@@ -30,7 +33,10 @@ const CardProductcard = ({ name, category, price, currency, stock, img, quantity
               <span className={ cartProductCardStyle.stock }>{`Stock disponible (${stock})`}</span>
             </span>
         </span>
-        <button className={buttonStyle.btnPrimary} onClick={() => handleDeleteProduct(id)}>Eliminar</button>
+        <span className={cartProductCardStyle.buttonContainerFooter}>
+          <button className={cartProductCardStyle.btnRemove} onClick={() => handleDeleteProduct(id)}>x</button>
+        </span>
+        
     </div>
   )
 }

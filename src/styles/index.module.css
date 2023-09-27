@@ -42,10 +42,24 @@ main{
     justify-content: center;
     align-items: center;
     padding: 50px;
+    min-height: 70vh;
+}
+
+h3{
+    text-align: center;
 }
 
 button{
     cursor: pointer;
+}
+
+.boxContainer{
+    border-radius: 10px;
+    background: var(--grey-white);
+    /* Shadows/Gray Blue 30/3%/5b */
+    box-shadow: 0px 2px 5px 0px rgba(38, 51, 77, 0.03);
+    border: 10px;
+    padding: 20px;
 }
 
 @media screen and (max-width: 900px) {
@@ -55,6 +69,7 @@ button{
 
     main{
         padding: 0px 30px;
+        flex-direction: column;
     }
 
     .btnPrimary{

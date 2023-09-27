@@ -9,15 +9,15 @@
     padding: 30px;
     width: 25%;
     height: 100%;
-    margin: 0px;
+    margin: 0;
+    min-height: 450px;
 }
 
 .imageContainer{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 200px;
+    height: 150px;
 }
 
 img{
@@ -37,7 +37,7 @@ img{
 .productName{
     font-size: 18px;
     font-weight: var(--font-weight-strong);
-    padding: 10px;
+    padding: 15px 0px 15px 0px;
 }
 
 .priceBanner{
