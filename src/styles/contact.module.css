@@ -15,9 +15,9 @@ form{
 
 label{
     color: var(--grey-normal);
-    font-family: var(--font-family-links-2);
+    font-family: var(--font-family);
     font-size: 16px;
-    font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight);
     line-height: normal;
 }
 

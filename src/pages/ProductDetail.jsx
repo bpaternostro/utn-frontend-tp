@@ -16,7 +16,9 @@ const ProductDetail = () => {
                 </div>
                 <div>
                     <div className={ indexStyle.boxContainer }>
-                        <img src={`/img/${producto.img.src}`} alt={producto.img.alt} />
+                        <div className={ productDetailStyle.imageContainer }>
+                            <img src={`/img/${producto.img.src}`} alt={producto.img.alt} />
+                        </div>
                         <div className={ productDetailStyle.detailContainer }>
                             <span className={ productDetailStyle.price }>{`${producto.currency} ${producto.price.toLocaleString('en-US')}`}</span>
                             <span className={productCardStyle.categoryName}>{producto.category}</span>    

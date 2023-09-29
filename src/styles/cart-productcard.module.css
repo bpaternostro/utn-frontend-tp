@@ -122,7 +122,11 @@ img{
     gap: 10px;
     
 }
-
+.priceQuantityBanner > span:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+}
 @media screen and (max-width: 600px) {
     .product{
         flex-direction: column;

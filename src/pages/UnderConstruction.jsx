@@ -3,7 +3,7 @@ import React from 'react'
 const UnderConstruction = () => {
   return (
     <main>
-        <h2>This section is under construction</h2>
+        <h2>Esta sección esta en construcción</h2>
     </main>
   )
 }

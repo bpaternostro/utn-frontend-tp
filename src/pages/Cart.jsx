@@ -31,7 +31,7 @@ const Cart = () => {
         <div className={ cartStyle.cartTotal }>
           <div className={`${ cartStyle.cartTotalContainer} ${indexStyle.boxContainer}`}  >
             <span className={ cartStyle.productTitle }>Total</span>
-            <span className={ cartStyle.totalPrice }>{`${currency} ${cartTotal.toLocaleString('en-US')}`}</span>
+            <span className={ cartStyle.totalPrice }>{`${currency} ${Number(cartTotal).toLocaleString('en-US')}`}</span>
             <button className={buttonStyle.btnPrimary}>Compra</button>
           </div>
         </div>

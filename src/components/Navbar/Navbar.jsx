@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { navbarStyle, indexStyle } from '../../styles'
-import {BsFillCartFill} from 'react-icons/bs'
+import { navbarStyle, buttonStyle } from '../../styles'
+import {FaShoppingCart} from 'react-icons/fa'
 import {AiOutlineSearch} from 'react-icons/ai'
 import {FaShop} from 'react-icons/fa6'
 import {ImHome3} from 'react-icons/im'
@@ -31,28 +31,29 @@ const Navbar = () => {
             }
             <div>
                 <nav>
-                    <Link to="/contact">
+                    <Link to="/contact" style={{display: show ? "none": "block"}}>
                         Contacto
                         { location.pathname ==='/contact' ? <span className={navbarStyle.sectionMark} style={{display:"block"}}></span> : <span className={navbarStyle.sectionMark} style={{display:"none"}}></span>}
                     </Link>
-                    <Link to="/">
+                    <Link to="/" style={{display: show ? "none": "block"}}>
                         <ImHome3 size={18}/>
                         { location.pathname ==='/' ? <span className={navbarStyle.sectionMark} style={{display:"block"}}></span> : <span className={navbarStyle.sectionMark} style={{display:"none"}}></span>}
                     </Link>
                     <Link to="" id={navbarStyle.searchNavIcon} onClick={handleShowSearch}>
-                        {
-                            show ? <AiOutlineSearch color="#00CED1" size={18} />: <AiOutlineSearch size={18}/>
-                        }
+                        <AiOutlineSearch size={18} />
                     </Link>
-                    <Link to="/cart" className={navbarStyle.cartBanner}>
+                    <Link to="/cart" className={navbarStyle.cartBanner} style={{display: show ? "none": "block"}}>
                         <div><span className={navbarStyle.cartBubble}>{cart.length}</span></div>
-                        <BsFillCartFill size={18}/>
+                        <FaShoppingCart size={18}/>
                         { location.pathname ==='/cart' ? <span className={navbarStyle.sectionMark} style={{display:"block"}}></span> : <span className={navbarStyle.sectionMark} style={{display:"none"}}></span>}
                     </Link>
                     
                 </nav>
                 {
-                    show && <span style={{"display":"block"}}><input type="text" name="search" id={navbarStyle.searchMobile} placeholder="Buscar ..." onChange={filterBySearchInputBox}/></span>
+                    show && <span style={{"display":"block"}}>
+                                <input type="text" name="search" id={navbarStyle.searchMobile} placeholder="Buscar ..." onChange={filterBySearchInputBox}/>
+                                <button className={buttonStyle.btnRemove} onClick={handleShowSearch}>x</button>
+                            </span>
                 }
             </div>
         </header>

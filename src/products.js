@@ -33,7 +33,7 @@ const product3 = {
   currency:"$",
   stock:34,
   img:{src:"tv-hisense-43.jpg", alt:"Smart Tv 43 Pulgadas Full HD 43A42H - HISENSE"},
-  colors:[{color:"#2554C7",colorName:"Sapphire Blue"}, {color:"#000",colorName:"Negro"}, {color:"#66CDAA",colorName:"MediumAquaMarine"}],
+  colors:[{color:"#2554C7",colorName:"Sapphire Blue"}, {color:"#000",colorName:"Negro"}, {color:"#66CDAA",colorName:"Aqua Marine"}],
   id:3
 }
 
@@ -98,7 +98,7 @@ const product8 = {
   currency:"$",
   stock:4,
   img:{src:"airpods-3-apple.jpg", alt:"Apple AirPods (3ª generación) con estuche de carga Lightning - APPLE"},
-  colors:[{color:"#2554C7",colorName:"Sapphire Blue"}, {color:"#000",colorName:"Negro"}, {color:"#66CDAA",colorName:"MediumAquaMarine"}],
+  colors:[{color:"#2554C7",colorName:"Sapphire Blue"}, {color:"#000",colorName:"Negro"}, {color:"#66CDAA",colorName:"Aqua Marine"}],
   id:8
 }
 

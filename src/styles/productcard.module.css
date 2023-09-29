@@ -55,6 +55,7 @@ img{
     font-size: 18px;
     font-weight: var(--font-weight-strong);
     padding: 15px 0px 15px 0px;
+    letter-spacing: 0.5px;
 }
 
 .priceBanner{

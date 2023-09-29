@@ -5,7 +5,7 @@ const GlobalContext = createContext()
 const GlobalContextProvider = ({children}) => {
     const [products, setProductsToShow] = useState(productsDb)
     const [cart, setCart] = useState([])
-    const [cartTotal, setCartTotal] = useState([])
+    const [cartTotal, setCartTotal] = useState()
     const [error, setError] = useState()
     const [currency, setCurrency] = useState(productsDb[0].currency)
     const [filterFields, setFilterFields] = useState([])
@@ -15,7 +15,6 @@ const GlobalContextProvider = ({children}) => {
     const findProductCart = (id) => cart.find(product => product.id == id)
     const findProductById = (id) => products.find(prod => Number(prod.id) === Number(id))
     const handleClickBtn = (id, event) => {
-        const elements = document.querySelector('.msg');
         const productFound = findProductCart(id)
         setError(null)
         if (event.target.className.includes("minus")){

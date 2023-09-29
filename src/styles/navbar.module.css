@@ -48,7 +48,6 @@ header a{
     font-family: var(--font-family-links);
     display: flex;
     flex-direction: column;
-    gap: 5px;
 }
 
 header a:hover{
@@ -73,11 +72,13 @@ header div:nth-child(2) input{
     border: none;
     font-weight: var(--font-weight);
     color: var(--gray-blue-grey-blue-80);
-    font-size: 12px;
+    font-size: 15px;
     font-family: var(--font-family-links);
 }
 
 .searchContainer > span{
+    display: flex;
+    align-items: center;
     background-color: transparent;
     border: none;
     margin: 10px;
@@ -101,12 +102,11 @@ header div:nth-child(2) input{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
 }
 
 .cartBubble{
     position: absolute;
-    top:20px;
+    top:12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -127,6 +127,22 @@ header div:nth-child(2) input{
     display: none;
 }
 
+header > div:nth-child(3) > span{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+header > div:nth-child(3) > span > button{
+    position: absolute;
+    right: 30px;
+    bottom: 34px;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    font-size: 10px;
+}
 @media screen and (max-width: 900px) {    
     header{
         justify-content: space-between;
@@ -138,6 +154,7 @@ header div:nth-child(2) input{
         justify-content: center;
         align-items: right;
         gap: 10px;
+        width: 200px;
 
     }
 
@@ -161,8 +178,11 @@ header div:nth-child(2) input{
     }
 
     header div:nth-child(1), header div:nth-child(3) nav{
-        gap: 10px;
+        gap: 20px;
+        padding-right: 20px;
+        padding-left: 10px;
     }
+    
 }
 
 @media screen and (max-width: 300px) {

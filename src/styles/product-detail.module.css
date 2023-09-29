@@ -21,12 +21,12 @@
 .productPara{
     color: var(--gray-blue-grey-blue-50);
     font-size: 16px;
-    font-weight: var(--font-light);
-    letter-spacing: 1px;
+    font-weight: var(--font-weight);
+    letter-spacing: 1.5px;
     text-align: auto;
-    background-color: var(--grey-white);
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
+    line-height: 25px;
 }
 
 .productDetailContainer > div:nth-child(1){
@@ -47,7 +47,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 10px;
     width: 100%;
 }
 
@@ -76,6 +76,9 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    border-right: 5px solid var(--color-green-1);
+    border-radius: 5px;
+    background-color: var(--grey-white);
 }
 
 .productDetailContainer > div:nth-child(2) > div:nth-child(2) > div:nth-child(2){
@@ -84,7 +87,14 @@
     gap:10px;
     border: 2px solid var(--grey-light);
     border-radius: 5px;
-    width: 95%;
+} 
+
+.productDetailContainer > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    border: 2px solid var(--grey-light);
+    border-radius: 5px;
 } 
 
 .productDetailContainer > div:nth-child(2) > div:nth-child(2) > div:nth-child(2) > span{
@@ -100,21 +110,27 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     gap: 30px;
     width: 100%;
     padding: 10px 20px 10px 20px;
 }
 
-.productDetailContainer > div:nth-child(2) > div:nth-child(1) > img{
-    width: 60%;
+.imageContainer{
+    width: 90%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .productDetailContainer > div:nth-child(2) > div:nth-child(2) > div:nth-child(3){
     width: 100%;
+    padding: 20px;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
 }
 
 .colorCircleContainer{
