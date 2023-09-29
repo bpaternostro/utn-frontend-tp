@@ -8,7 +8,7 @@ header{
     border-bottom: 2px solid var(--gray-blue-grey-blue-95, #EDEFF2);
     width: 100vw;
     position: sticky; top: 0;
-    background-color: var(--nav-bar-background);
+    background-color: var(--grey-white);
 }
 
 header div{
@@ -16,23 +16,49 @@ header div{
     align-items: center;
 }
 
-header div:nth-child(1), header div:nth-child(3) nav{
+header div:nth-child(3) nav{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     gap: 30px;
 }
 
+.logoBrandContainer{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    background-color: var(--color-green-1);
+    height: 80%;
+    border-radius: 20px;
+    color: #FFF;
+    padding: 15px;
+}
+
 .logoBrand{
-    color: var(--gray-blue-grey-blue-50);
+    color: var(--grey-white);;
     font-size: 20px;
     font-weight: var(--font-weight);
     font-family: var(--font-family-links);
+    border-left: 2px solid var(--grey-white);
+    padding-left: 10px;
 }
 
 header a{
     font-size: 16px;
     font-family: var(--font-family-links);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+header a:hover{
+    color: var(--color-green-1);
+    .cartBubble{
+        width: 22px;
+        height: 22px;
+        font-size: 11px;
+        border-color: var(--color-green-1);
+    }
 }
 
 header div:nth-child(2){
@@ -51,7 +77,7 @@ header div:nth-child(2) input{
     font-family: var(--font-family-links);
 }
 
-header > div:nth-child(2) > button{
+.searchContainer > span{
     background-color: transparent;
     border: none;
     margin: 10px;
@@ -69,7 +95,8 @@ header > div:nth-child(2) > button{
 }
 
 .cartBanner{
-    position: relative;
+    display: flex;
+    flex-direction: column;
     margin: 0px;
     display: flex;
     align-items: center;
@@ -79,8 +106,7 @@ header > div:nth-child(2) > button{
 
 .cartBubble{
     position: absolute;
-    top:-15px;
-    right: -5px;
+    top:20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,6 +119,12 @@ header > div:nth-child(2) > button{
     border-radius: 25px;
     padding: 5px;
     background-color: var(--grey-white);
+}
+
+.sectionMark{
+    width: 100%;
+    border: 2px solid var(--color-green-1);
+    display: none;
 }
 
 @media screen and (max-width: 900px) {    

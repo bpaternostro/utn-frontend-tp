@@ -18,7 +18,7 @@ const product2 = {
   price:219999.56,
   description:"Televisor Smart Android de 50'' LED 4K UHD. Potencia 20W. Resolucion 3840 x 2160. Salidas de audio digital (optica) Dolby Atmos. Bluetooth. Wi Fi. Entrada video componente. 2 Entradas USB. 4 Entradas HDMI. Incluye Control remoto, Guia de inicio rapida, Folleto legal y de seguridad, Cable de alimentacion, Soporte para la mesa, 2 pilas AAA.",
   currency:"$",
-  stock:13,
+  stock:0,
   img:{src:"tv-phillips-50.jpg", alt:"Smart Tv 50 Pulgadas 4K Ultra HD 50PUD7406/77 - PHILIPS"},
   colors:[{color:"#737CA1",colorName:"Slate Blue Grey"}, {color:"#36454F",colorName:"Charcoal Blue"}, {color:"#151B54",colorName:"Night Blue"}],
   id:2
@@ -44,7 +44,7 @@ const product4 = {
   price:499999.09,
   description:"Las características de cada producto pueden variar según el país de adquisición del mismo, por lo que la siguiente descripción no debe ser interpretada como un compromiso contractual. Te invitamos a revisar las características específicas para cada producto antes de realizar la compra online en la sección 'Ver Modelos' de esta misma página, o con un asesor de ventas si es en una tienda física.",
   currency:"$",
-  stock:5,
+  stock:0,
   img:{src:"notebook-asus.jpg", alt:"NOTEBOOK i3 X515EA-BR1751WPI 4G256G - ASUS"},
   colors:[{color:"#2B60DE",colorName:"Balloon Blue"}, {color:"#7DFDFE",colorName:"Tron Blue"},],
   id:4
@@ -70,7 +70,7 @@ const product6 = {
   price:729000.09,
   description:"Las características de cada producto pueden variar según el país de adquisición del mismo, por lo que la siguiente descripción no debe ser interpretada como un compromiso contractual. Te invitamos a revisar las características específicas para cada producto antes de realizar la compra online en la sección 'Ver Modelos' de esta misma página, o con un asesor de ventas si es en una tienda física.",
   currency:"$",
-  stock:7,
+  stock:0,
   img:{src:"tablet-samsung-s9.jpg", alt:"TAB 11P S9 SM-X710 8G128GB GR - SAMSUNG"},
   colors:[{color:"#666", colorName:"Gris"}, {color:"#000000",colorName:"Negro"}, {color:"#DADBDD", colorName:"Plata"}],
   id:6

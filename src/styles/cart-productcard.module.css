@@ -123,17 +123,6 @@ img{
     
 }
 
-.btnRemove{
-    width: 30px;
-    height: 30px;
-    border-radius: 25px;
-    font-size: 18px;
-    color: var(--grey-white);
-    font-weight: var(--font-weight-strong);
-    background-color: var(--site-button-color);
-
-}
-
 @media screen and (max-width: 600px) {
     .product{
         flex-direction: column;

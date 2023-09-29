@@ -11,6 +11,18 @@
     padding: 2px 5px 2px 5px;
     font-size: 12px;
     margin: 2px;
+    letter-spacing: 0.5px;
+}
+
+.appliedFilter:hover, .filterToApplied:hover{
+    background-color: var(--color-violet);
+    color: var(--grey-white);
+}
+
+.appliedFilter{
+    background-color: var(--color-violet);
+    color: var(--grey-white);
+    
 }
 
 .filterToApplied{
@@ -34,14 +46,25 @@
 }
 
 .sectionFilter{
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: var(--font-weight-strong);
+    letter-spacing: 0.5px;
 }
 
 .sectionFilterCategory{
-    font-size: 12px;
-    color: var(--grey-light);
+    font-size: 13px;
+    color: var(--grey-normal);
     font-weight: var(--font-weight-light);
+    letter-spacing: 0.5px;
 }
+
+.appliedFilterContainer > div:nth-child(2), .appliedFilterContainer > div:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
 @media screen and (max-width: 900px) {
     .filter{
         flex-direction: column;

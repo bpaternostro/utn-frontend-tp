@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { buttonStyle } from '../../styles'
-import { cartProductCardStyle } from '../../styles'
+import { buttonStyle,cartProductCardStyle } from '../../styles'
 import { Link } from 'react-router-dom'
 import { useGlobalContext } from '../../context/GlobalContextProvider'
 
@@ -9,7 +8,7 @@ const CardProductcard = ({ name, category, price, currency, stock, img, quantity
   return (
     <div className={cartProductCardStyle.product}>
         <span className={cartProductCardStyle.buttonContainerHeader}>
-          <button className={cartProductCardStyle.btnRemove} onClick={() => handleDeleteProduct(id)}>x</button>
+          <button className={buttonStyle.btnRemove} onClick={() => handleDeleteProduct(id)}>x</button>
         </span>
         <span className={cartProductCardStyle.imageContainer}>
           <img src={`/img/${img.src}`} alt={img.alt} />
@@ -34,7 +33,7 @@ const CardProductcard = ({ name, category, price, currency, stock, img, quantity
             </span>
         </span>
         <span className={cartProductCardStyle.buttonContainerFooter}>
-          <button className={cartProductCardStyle.btnRemove} onClick={() => handleDeleteProduct(id)}>x</button>
+          <button className={buttonStyle.btnRemove} onClick={() => handleDeleteProduct(id)}>x</button>
         </span>
         
     </div>

@@ -10,7 +10,10 @@ footer{
     font-style: normal;
     font-weight: 500;
     padding: 60px 80px 150px 80px;
+    background-color: var(--color-green-2);
+    color: var(--prime-letter-color);
 }
+
 
 footer h4{
     font-weight: var(--font-weight);
@@ -32,7 +35,7 @@ footer div:nth-child(1) > h3 {
 }
 
 footer div:nth-child(1) p{
-    color: var(--gray-blue-grey-blue-80, #ADB8CC);
+    color: var(--prime-letter-color);
     font-size: 14px;
     font-style: normal;
     font-weight: var(--font-weight);

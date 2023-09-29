@@ -1,8 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 
-import { productDetailStyle } from '../styles'
-import { buttonStyle } from '../styles'
+import { buttonStyle, indexStyle, productDetailStyle, productCardStyle } from '../styles'
 import { useGlobalContext } from '../context/GlobalContextProvider'
 
 const ProductDetail = () => {
@@ -13,19 +12,23 @@ const ProductDetail = () => {
     <main>
             <div className={ productDetailStyle.productDetailContainer }>
                 <div>
-                    <h1 className={ productDetailStyle.productTitle }>Apple Mac Book Pro</h1>
+                    <h2 className={ productDetailStyle.productTitle }>{producto.name}</h2>
                 </div>
                 <div>
-                    <div>
+                    <div className={ indexStyle.boxContainer }>
                         <img src={`/img/${producto.img.src}`} alt={producto.img.alt} />
-                        <span className={ productDetailStyle.price }>{`${producto.currency} ${producto.price}`}</span>
+                        <div className={ productDetailStyle.detailContainer }>
+                            <span className={ productDetailStyle.price }>{`${producto.currency} ${producto.price.toLocaleString('en-US')}`}</span>
+                            <span className={productCardStyle.categoryName}>{producto.category}</span>    
+                            <span className={productCardStyle.stockMessage}>Stock Disponible <span className='stock'>({producto.stock})</span></span>
+                        </div>
                     </div>
                     <div>
                         <p className={ productDetailStyle.productPara }>
                             {producto.description}
                         </p>
                         <div>
-                            <span>Colors</span>
+                            <span>Colores</span>
                             <div>
                                 {
                                     producto.colors.map(c => 
@@ -38,7 +41,7 @@ const ProductDetail = () => {
                             </div>
                         </div>
                         <div>
-                            <button className={buttonStyle.btnPrimary} onClick={() => handleAddProduct(producto.id)}>Add to cart</button>
+                            <button className={buttonStyle.btnPrimary} onClick={() => handleAddProduct(producto.id)}>Agregar al carrito</button>
                         </div>
                     </div>
                 </div>
