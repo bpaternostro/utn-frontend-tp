@@ -14,6 +14,9 @@ const GlobalContextProvider = ({children}) => {
     const isInCart = (id) => cart.some(product=> product.id == id)
     const findProductCart = (id) => cart.find(product => product.id == id)
     const findProductById = (id) => products.find(prod => Number(prod.id) === Number(id))
+    const handleDeleteFromCartProduct = (id) => {
+        setCart(cart.filter((product) => product.id !== id))
+    }
     const handleClickBtn = (id, event) => {
         const productFound = findProductCart(id)
         setError(null)
@@ -84,7 +87,7 @@ const GlobalContextProvider = ({children}) => {
     },[cart])
     
     return (
-        <GlobalContext.Provider value={{brands, cart, cartTotal, products, categories, currency, filterFields, handleAddProduct, isInCart, findProductCart, filterBySearchInputBox, handleDeleteProduct, handleFilterFields, handleClickBtn}}>
+        <GlobalContext.Provider value={{brands, cart, cartTotal, products, categories, currency, filterFields, handleAddProduct, isInCart, findProductCart, filterBySearchInputBox, handleDeleteProduct, handleDeleteFromCartProduct, handleFilterFields, handleClickBtn}}>
             {children}
         </GlobalContext.Provider>
     )

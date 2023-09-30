@@ -9,6 +9,7 @@ header{
     width: 100vw;
     position: sticky; top: 0;
     background-color: var(--grey-white);
+    z-index: 1000;
 }
 
 header div{
@@ -19,8 +20,7 @@ header div{
 header div:nth-child(3) nav{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    gap: 30px;
+    gap:30px;
 }
 
 .logoBrandContainer{
@@ -28,7 +28,7 @@ header div:nth-child(3) nav{
     align-items: center;
     gap:10px;
     background-color: var(--color-green-1);
-    height: 80%;
+    height: 70%;
     border-radius: 20px;
     color: #FFF;
     padding: 15px;
@@ -36,7 +36,7 @@ header div:nth-child(3) nav{
 
 .logoBrand{
     color: var(--grey-white);;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: var(--font-weight);
     font-family: var(--font-family-links);
     border-left: 2px solid var(--grey-white);
@@ -61,7 +61,7 @@ header a:hover{
 }
 
 header div:nth-child(2){
-    width: 345px;
+    width: 30%;
     gap: 5px;
     border-radius: 30px;
     background: #FFF;
@@ -129,33 +129,48 @@ header div:nth-child(2) input{
 
 header > div:nth-child(3) > span{
     display: flex;
-    gap: 10px;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
 }
 
-header > div:nth-child(3) > span > button{
-    position: absolute;
-    right: 30px;
-    bottom: 34px;
+header > div:nth-child(3) > span:nth-child(1) > span{
+    padding: 20px;
+}
+
+header > div:nth-child(3) > span:nth-child(1) > span > button{
     width: 20px;
     height: 20px;
     border-radius: 5px;
-    font-size: 10px;
+    font-size: 12px;
+    margin: 5px;
+    right: 15px;
+    top:10px;
+    position: absolute;
 }
+
+#searchMobile{
+    width: 100%;
+    padding: 10px;
+}
+
 @media screen and (max-width: 900px) {    
     header{
         justify-content: space-between;
+        padding: 0px 20px 0px 20px;
     }
-    
+
     header > div:nth-child(3){
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: right;
-        gap: 10px;
-        width: 200px;
+        align-items: center;
+        justify-content: end;
+        padding: 0px 10px 0px 10px;
+    }
 
+    header div:nth-child(1), header div:nth-child(3) nav{
+        gap: 20px;
+        padding-right: 20px;
+        padding-left: 10px;
     }
 
     header > div:nth-child(3) > span{
@@ -165,30 +180,61 @@ header > div:nth-child(3) > span > button{
     #searchNavIcon{
         display: block;
     }
+
     .searchContainer, .logoBrand {
         display: none;
     }
+    
+    #searchMobile{
+        width: 400px;
+        padding: 10px;
+    }
+    
+    header > div:nth-child(3) > span:nth-child(1) > span > button{
+        right: 35px;
+    }
+
 }
 
 @media screen and (max-width: 500px) {
-   
+
     header{
         justify-content: space-between;
-        padding: 0px 20px 0px 20px;
+        padding: 0px 10px 0px 10px;
     }
 
-    header div:nth-child(1), header div:nth-child(3) nav{
-        gap: 20px;
-        padding-right: 20px;
-        padding-left: 10px;
+    .logoBrandContainer{
+        padding: 5px;
+        width: auto;
     }
     
+    #searchMobile{
+        width: 100%;
+        padding: 10px;
+    }
 }
 
 @media screen and (max-width: 300px) {
+    
+    header{
+        padding: 0px 5px 0px 5px;
+    }
+
+    header > div:nth-child(3){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 10px 0px 10px;
+        width: 100%;
+    }
+
+    .logoBrandContainer{
+        display: none;
+    }
 
     header div:nth-child(1), header div:nth-child(3) nav{
-        gap: 5px;
+        gap: 15px;
+        padding-right: 10px;
+        padding-left: 10px;
     }
-    
 }

@@ -73,12 +73,11 @@ span{
     color: var(--prime-letter-color);
 }
 
+textarea:focus, input:focus{
+    outline: none;
+}
 
 @media screen and (max-width: 900px) {
-    input{
-        width: 100%;
-    }
-
     main{
         padding: 0px 30px;
         flex-direction: column;
@@ -89,3 +88,4 @@ span{
     }
 
 }
+

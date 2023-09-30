@@ -67,6 +67,7 @@
     font-size: 22px;
     font-weight: var(--font-weight);
 }
+
 @media screen and (max-width: 1000px) {
     .cart{
         padding: 30px 5px;
@@ -82,5 +83,9 @@
     .cartTotalContainer{
         height: 100%;
         width: 100%;
+    }
+
+    .cartProductContainer > div:nth-child(2){
+        justify-content: center;
     }
 }

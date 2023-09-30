@@ -28,6 +28,10 @@ input, textarea{
     padding: 3px 8px 3px 16px;
 }
 
+input{
+    height: 40px;
+}
+
 input::placeholder {
     color: var(--gray-blue-grey-blue-50);
     font-weight: var(--font-weight-light);

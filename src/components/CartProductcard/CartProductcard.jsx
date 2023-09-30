@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { useGlobalContext } from '../../context/GlobalContextProvider'
 
 const CardProductcard = ({ name, category, price, currency, stock, img, quantity, id }) => {
-  const {counter, handleClickBtn, handleDeleteProduct} = useGlobalContext()
+  const {counter, handleClickBtn, handleDeleteProduct, handleDeleteFromCartProduct} = useGlobalContext()
   return (
     <div className={cartProductCardStyle.product}>
         <span className={cartProductCardStyle.buttonContainerHeader}>
@@ -33,7 +33,7 @@ const CardProductcard = ({ name, category, price, currency, stock, img, quantity
             </span>
         </span>
         <span className={cartProductCardStyle.buttonContainerFooter}>
-          <button className={buttonStyle.btnRemove} onClick={() => handleDeleteProduct(id)}>x</button>
+          <button className={buttonStyle.btnRemove} onClick={() => handleDeleteFromCartProduct(id)}>x</button>
         </span>
         
     </div>

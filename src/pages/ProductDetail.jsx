@@ -34,7 +34,7 @@ const ProductDetail = () => {
                             <div>
                                 {
                                     producto.colors.map(c => 
-                                        <div className={ productDetailStyle.colorCircleContainer }>
+                                        <div key={c.colorName} className={ productDetailStyle.colorCircleContainer }>
                                             <div style={{backgroundColor: c.color}} className={productDetailStyle.colorCircle}></div>
                                             <span className={ productDetailStyle.colorCircleName }>{c.colorName} </span>
                                         </div>
