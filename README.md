@@ -1,4 +1,6 @@
-# Trabajo final frontend Bruno Paternostro - Diplamatura FullStack
+# Trabajo final frontend - Diplamatura FullStack UTN
+Alumno: Bruno Paternostro 
+Profesor: Matias Agustin Gimenez
 
 Stack tecnologicó utilizado:
 - React (Router, ReactIcons, Contexto)
