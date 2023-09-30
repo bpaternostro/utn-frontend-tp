@@ -4,6 +4,7 @@ Stack tecnologicó utilizado:
 - React (Router, ReactIcons, Contexto)
 - Css Flexbox
 - Vercel para deployar el proyecto (el hosting tiene vigencia hasta el 2-10-2023)
+  - https://utn-frontend-tp.vercel.app/
 
 Comentarios sobre el desarrollo:
 - El tema utilizado es "carrito de compras de productos electronicos"
