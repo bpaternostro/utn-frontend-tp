@@ -21,12 +21,13 @@ Comentarios sobre el desarrollo:
         - Barra de navegación con resaltador de sección y campo de busqueda
             - Para los dispositivos moviles se oculta el campo de busqueda y habilita un icono que presionandolo muestra el campo de busqueda
         - Marketplace con barra de filtros y campo de busqueda que aparece unicamente en la sección
-        -  Detalle de cada uno de los productos con boton para agregar al carrito
-        -  Carrito de compras con funcionalidades
+        - Detalle de cada uno de los productos con boton para agregar al carrito
+        - Si el producto no cuenta con Stock, deberia mostrar un mensaje e inhabilitar la opción de ingresar al detalle
+        - Carrito de compras con funcionalidades
             - Alta/baja de productos
             - Modificacion de cantidad
             - Suma de totales
-        -  Sección de contacto con Formulario que incluye los campos solicitados en la consigna
-        -  Footer con secciones (pendientes)
+        - Sección de contacto con Formulario que incluye los campos solicitados en la consigna
+        - Footer con secciones (pendientes)
        
         
